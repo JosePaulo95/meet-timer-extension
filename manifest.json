@@ -1,0 +1,17 @@
+{
+  "name": "Session finisher",
+  "version": "1.0",
+  "description": "Shows how to use DOMParser in an extension service worker using the offscreen document.",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {},
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": ["tabs", "activeTab"]
+}
